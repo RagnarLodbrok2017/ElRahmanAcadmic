@@ -14,17 +14,14 @@ class StatusTableSeeder extends Seeder
     {
         DB::table('status')->insert(array(
             array(
-                'id' =>'1',
                 'name' => 'عادى',
                 'discount' => '0.0'
             ),
             array(
-                'id' =>'2',
                 'name' => 'يتيم الأب',
                 'discount' => '0.0'
             ),
             array(
-                'id' =>'3',
                 'name' => 'يتيم الأم',
                 'discount' => '0.0'
             ),

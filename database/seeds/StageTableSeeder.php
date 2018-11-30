@@ -14,15 +14,12 @@ class StageTableSeeder extends Seeder
     {
         DB::table('stage')->insert(array(
             array(
-                'id' =>'1',
                 'name' => 'ابتدائى',
             ),
             array(
-                'id' =>'2',
                 'name' => 'اعدادى',
             ),
             array(
-                'id' =>'3',
                 'name' => 'ثانوى',
             ),
         ));

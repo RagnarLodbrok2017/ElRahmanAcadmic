@@ -241,16 +241,20 @@ class StudentController extends Controller
     {
         if ($request->ajax()) {
             $Student = Student::find($id);
-            Student::destroy($id);
-            //remove incustudent parents
-            if ($Student->parents_id !== 0 || $Student->parents_id != null) {
-                Parents::destroy($Student->parents_id);
-            }
+
             //remove incustudent payments
             $payment = Payment::where('student_id', $Student->id)->first();
             if ($payment->id != null) {
                 Payment::destroy($payment->id);
             }
+
+            Student::destroy($id);
+            
+            //remove incustudent parents
+            if ($Student->parents_id !== 0 || $Student->parents_id != null) {
+                Parents::destroy($Student->parents_id);
+            }
+
             return Response($Student);
         }
     }

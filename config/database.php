@@ -52,10 +52,10 @@ return [
             'username' => env('DB_USERNAME', 'b021c0ad54225f'),
             'password' => env('DB_PASSWORD', '61dbd3cb'),
             'unix_socket' => env('DB_SOCKET', ''),
-            /*'charset' => 'utf8mb4',
-            'collation' => 'utf8mb4_unicode_ci',*/
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            /*'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',*/
             'prefix' => '',
             'strict' => true,
             'engine' => null,

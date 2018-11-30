@@ -41,7 +41,7 @@ class CreateStudentsTable extends Migration
             $table->foreign('type_id')->references('id')->on('type');
             $table->integer('status_id')->nullable();
             $table->foreign('status_id')->references('id')->on('status');
-            
+
             $table->integer('level_id')->nullable();
             $table->foreign('level_id')->references('id')->on('level');
 

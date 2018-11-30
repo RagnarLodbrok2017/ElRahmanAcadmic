@@ -31,19 +31,23 @@ class CreateStudentsTable extends Migration
             $table->unsignedInteger('classroom_id');
             $table->foreign('classroom_id')->references('id')->on('classroom');
 
-            /*$table->integer('stage_id')->nullable();*/
+//            $table->integer('stage_id')->nullable();
             $table->unsignedInteger('stage_id')->nullable();
             $table->foreign('stage_id')->references('id')->on('stage');
 
-            $table->integer('shift_id')->nullable();
+//            $table->integer('shift_id')->nullable();
+            $table->unsignedInteger('shift_id')->nullable();
             $table->foreign('shift_id')->references('id')->on('shift');
 
             $table->unsignedInteger('type_id')->nullable();
             $table->foreign('type_id')->references('id')->on('type');
-            $table->integer('status_id')->nullable();
+
+//            $table->integer('status_id')->nullable();
+            $table->unsignedInteger('status_id')->nullable();
             $table->foreign('status_id')->references('id')->on('status');
 
-            $table->integer('level_id')->nullable();
+//            $table->integer('level_id')->nullable();
+            $table->unsignedInteger('level_id')->nullable();
             $table->foreign('level_id')->references('id')->on('level');
 
             $table->timestamps();

@@ -264,7 +264,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <a href="../downloadIncuStudents" class=""><i class="fa fa-download menu-icon"></i> تحميل الغياب</a>
+                        <a href="../downloadIncuStudents" class=""><i class="fa fa-download menu-icon"></i> تحميل غياب الطلاب</a>
                     </li>
                     <li>
                         <a href="../center"><i class="fa fa-home menu-icon"></i> السنتر</a>

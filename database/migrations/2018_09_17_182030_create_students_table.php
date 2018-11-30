@@ -31,7 +31,8 @@ class CreateStudentsTable extends Migration
             $table->unsignedInteger('classroom_id');
             $table->foreign('classroom_id')->references('id')->on('classroom');
 
-            $table->integer('stage_id')->nullable();
+            /*$table->integer('stage_id')->nullable();*/
+            $table->unsignedInteger('stage_id')->nullable();
             $table->foreign('stage_id')->references('id')->on('stage');
 
             $table->integer('shift_id')->nullable();

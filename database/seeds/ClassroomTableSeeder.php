@@ -12,7 +12,7 @@ class ClassroomTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('level')->insert(array(
+        DB::table('classroom')->insert(array(
             array(
                 'name' => 'الفصل الأول 1',
             ),

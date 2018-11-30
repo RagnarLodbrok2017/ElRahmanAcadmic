@@ -15,20 +15,20 @@ class StatusTableSeeder extends Seeder
         DB::table('status')->insert(array(
             array(
                 'name' => 'عادى',
-                'discount' => '0.0'
+                'discount' => '0'
             ),
             array(
                 'name' => 'يتيم الأب',
-                'discount' => '0.0'
+                'discount' => '0'
             ),
             array(
                 'name' => 'يتيم الأم',
-                'discount' => '0.0'
+                'discount' => '0'
             ),
             array(
                 'id' =>'4',
                 'name' => 'يتيم الأثنين',
-                'discount' => '0.0'
+                'discount' => '0'
             ),
         ));
     }

@@ -41,7 +41,7 @@ class StudentController extends Controller
         $classes = Classroom::all();
         $levels = Level::all();
         $shifts = Shift::all();
-        if ($students.count() != 0) {
+        if ($students->count() != 0) {
             //total payment
             $Total_Payment = 0;
             foreach ($students as $student) {

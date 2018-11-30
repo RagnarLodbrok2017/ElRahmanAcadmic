@@ -41,31 +41,33 @@ class StudentController extends Controller
         $classes = Classroom::all();
         $levels = Level::all();
         $shifts = Shift::all();
-        //total payment
-        $Total_Payment = 0;
-        foreach ($students as $student) {
-            $payment = $student->payment->price;
-            $Total_Payment = $Total_Payment + $payment;
-        }
-        //number of student that price = 0
-        $Total_Students_Payment_Zero = 0;
-        foreach ($students as $student) {
-            if ($student->payment->price == 0) {
-                $Total_Students_Payment_Zero++;
+        if ($students.count() != 0) {
+            //total payment
+            $Total_Payment = 0;
+            foreach ($students as $student) {
+                $payment = $student->payment->price;
+                $Total_Payment = $Total_Payment + $payment;
             }
-        }
-        //number of student that price > 0
-        $Total_Students_Payment_Not_Zero = 0;
-        foreach ($students as $student) {
-            if ($student->payment->price !== 0) {
-                $Total_Students_Payment_Not_Zero++;
+            //number of student that price = 0
+            $Total_Students_Payment_Zero = 0;
+            foreach ($students as $student) {
+                if ($student->payment->price == 0) {
+                    $Total_Students_Payment_Zero++;
+                }
             }
-        }
-        //number of student that the father or mother is dead > 0
-        $Total_Students_Parents_Dead = 0;
-        foreach ($students as $student) {
-            if ($student->status_id !== 1) {
-                $Total_Students_Parents_Dead++;
+            //number of student that price > 0
+            $Total_Students_Payment_Not_Zero = 0;
+            foreach ($students as $student) {
+                if ($student->payment->price !== 0) {
+                    $Total_Students_Payment_Not_Zero++;
+                }
+            }
+            //number of student that the father or mother is dead > 0
+            $Total_Students_Parents_Dead = 0;
+            foreach ($students as $student) {
+                if ($student->status_id !== 1) {
+                    $Total_Students_Parents_Dead++;
+                }
             }
         }
 
@@ -249,7 +251,7 @@ class StudentController extends Controller
             }
 
             Student::destroy($id);
-            
+
             //remove incustudent parents
             if ($Student->parents_id !== 0 || $Student->parents_id != null) {
                 Parents::destroy($Student->parents_id);

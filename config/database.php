@@ -1,5 +1,10 @@
 <?php
+/*$url = parse_url(getenv("b021c0ad54225f:61dbd3cb@us-cdbr-iron-east-01.cleardb.net"));
 
+$host = $url["us-cdbr-iron-east-01.cleardb.net"];
+$username = $url["b021c0ad54225f"];
+$password = $url["61dbd3cb"];
+$database = substr($url["heroku_c4220dfebe1953f"], 1);*/
 return [
 
     /*

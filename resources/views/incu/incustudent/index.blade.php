@@ -33,7 +33,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @if(isset($students))
+                                    @if(isset($students) && $students->count() != 0)
                                         @foreach($students  as $index => $student)
                                             <tr>
                                                 <td class="action-link text-center">
@@ -320,80 +320,6 @@
             </div>
         </div>
 
-
-    <!--Edit details modal
-        <div id="editDetailModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title"><i class="fa fa-edit"></i>تعديل بيانات الطالب</h4>
-                    </div>
-                    <div class="modal-body dash-form">
-                        <div class="col-sm-3">
-                            <label class="clear-top-margin"><i class="fa fa-user"></i>الأسم الأول</label>
-                            {{--{!!Form::text('first_name',$student->first_name,['placeholder' => ''])!!}--}}
-        </div>
-        <div class="col-sm-3">
-            <label class="clear-top-margin"><i class="fa fa-user"></i>الأسم الثانى</label>
-{{--{!!Form::text('middle_name',$student->middle_name,['placeholder' => ''])!!}--}}
-        </div>
-        <div class="col-sm-3">
-            <label class="clear-top-margin"><i class="fa fa-user"></i>اللقب</label>
-{{--{!!Form::text('last_name',$student->last_name,['placeholder' => ''])!!}--}}
-        </div>
-        <div class="col-sm-3">
-            <label class="clear-top-margin"><i class="fa fa-phone"></i>التليفون</label>
-{{--{!! Form::text('phone',$student->phone,['placeholder' =>'']) !!}--}}
-        </div>
-        <div class="clearfix"></div>
-        <div class="col-sm-3">
-            <label><i class="fa fa-cogs"></i>الفصل</label>
-{{--@if(isset($classes))--}}
-    {{--<select name="classroom_id" id="classroom_id">--}}
-    {{--@foreach($classes as $key => $classroom_id)--}}
-    {{--<option value="{{ $classroom_id->id }}">{{$classroom_id->name}}</option>--}}
-    {{--@endforeach--}}
-    {{--</select>--}}
-    {{--@endif--}}
-    {{--</div>--}}
-    {{--<div class="col-sm-3">--}}
-    {{--<label><i class="fa fa-calendar"></i>الوقت</label>--}}
-    {{--@if(isset($shifts))--}}
-    {{--<select name="shift_id">--}}
-    {{--@foreach($shifts as $shift)--}}
-    {{--<option value="{{$shift->id}}">{{$shift->time}}</option>--}}
-    {{--@endforeach--}}
-    {{--</select>--}}
-    {{--@endif--}}
-        </div>
-{{--<div class="col-sm-3">--}}
-    {{--<label><i class="fa fa-credit-card"></i>المبلغ المقدم</label>--}}
-    {{--{{ Form::number('payment','',['placeholder' => '']) }}--}}
-    {{--</div>--}}
-    {{--<div class="col-sm-3">--}}
-    {{--<label><i class="fa fa-envelope-o"></i>حالة الطالب</label>--}}
-    {{--@if(isset($statuss))--}}
-    {{--<select name="status_id">--}}
-    {{--@foreach($statuss as $status)--}}
-    {{--<option value="{{$status->id}}">{{$status->name}}</option>--}}
-    {{--@endforeach--}}
-    {{--</select>--}}
-    {{--@endif--}}
-        </div>
-        <div class="clearfix"></div>
-    </div>
-    <div class="modal-footer">
-        <div class="table-action-box">
-            <a href="#" class="save"><i class="fa fa-check"></i>SAVE</a>
-            <a href="#" class="cancel" data-dismiss="modal"><i class="fa fa-ban"></i>CLOSE</a>
-        </div>
-    </div>
-</div>
-</div>
-</div>
--->
 
         <!--Edit details modal-->
         <div id="editDetailModal" class="modal fade" role="dialog">

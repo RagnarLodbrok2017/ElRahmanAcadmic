@@ -15,7 +15,7 @@ class CreateIncusubjectsTable extends Migration
     {
         Schema::create('incusubjects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name',100)->unique();
+            $table->string('name')->unique();
             $table->string('code')->nullable();
             $table->timestamps();
         });

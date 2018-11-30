@@ -21,9 +21,9 @@ class CreateStudentsTable extends Migration
           $table->boolean('sex');
           $table->string('region', 50)->nullable();
           $table->string('phone', 50)->nullable();
-          $table->string('photo', 200)->nullable();
+          $table->string('photo')->nullable();
           $table->date('dob');
-          $table->string('address',200)->nullable();
+          $table->string('address')->nullable();
 
           $table->unsignedInteger('parents_id')->nullable();
           $table->foreign('parents_id')->references('id')->on('parents')->onDelete('set null');

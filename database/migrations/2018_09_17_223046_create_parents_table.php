@@ -20,7 +20,7 @@ class CreateParentsTable extends Migration
           $table->string('job')->nullable();
           $table->string('FPhone', 50)->nullable();
           $table->string('LPhone', 50)->nullable();
-          $table->string('email', 200)->nullable();
+          $table->string('email')->nullable();
           $table->string('nationality',50)->default('مصرى')->nullable();
           $table->string('status')->default('عادى')->nullable();
           $table->timestamps();

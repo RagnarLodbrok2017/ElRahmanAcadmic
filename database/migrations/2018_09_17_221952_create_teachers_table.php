@@ -22,7 +22,7 @@ class CreateTeachersTable extends Migration
           $table->date('work_date');
           $table->string('region', 50)->nullable()->default('مسلم');
           $table->string('phone', 50)->nullable();
-          $table->string('address',200)->nullable();
+          $table->string('address')->nullable();
           $table->unsignedInteger('type_id')->nullable();
           $table->foreign('type_id')->references('id')->on('type');
           $table->string('subject')->nullable();

@@ -15,7 +15,7 @@ class CreateStuffTable extends Migration
     {
         Schema::create('stuff', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 200)->unique();
+            $table->string('name')->unique();
             $table->string('job')->nullable();
             $table->string('phone')->nullable();
             $table->bigInteger('salary')->default(0);

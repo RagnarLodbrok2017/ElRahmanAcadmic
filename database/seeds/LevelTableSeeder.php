@@ -14,9 +14,11 @@ class LevelTableSeeder extends Seeder
     {
         DB::table('level')->insert(array(
             array(
+                'id' =>'1',
                 'name' => 'KG 1',
             ),
             array(
+                'id' =>'2',
                 'name' => 'KG 2',
             ),
         ));

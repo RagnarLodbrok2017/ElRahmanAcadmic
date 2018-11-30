@@ -26,7 +26,6 @@ class StatusTableSeeder extends Seeder
                 'discount' => 0,
             ),
             array(
-                'id' =>'4',
                 'name' => 'يتيم الأثنين',
                 'discount' => 0,
             ),

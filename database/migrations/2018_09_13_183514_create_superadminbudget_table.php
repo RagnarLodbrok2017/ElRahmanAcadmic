@@ -18,13 +18,14 @@ class CreateSuperadminbudgetTable extends Migration
             $table->bigInteger('salary');
             $table->string('day');
             $table->string('description')->nullable();
-
-            $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-
-            $table->unsignedInteger('type_id');
-            $table->foreign('type_id')->references('id')->on('type');
             $table->timestamps();
+        });
+            Schema::table('superadminbudget', function($table) {
+                $table->unsignedInteger('user_id');
+                $table->foreign('user_id')->references('id')->on('users');
+
+                $table->unsignedInteger('type_id');
+                $table->foreign('type_id')->references('id')->on('type');
         });
     }
 

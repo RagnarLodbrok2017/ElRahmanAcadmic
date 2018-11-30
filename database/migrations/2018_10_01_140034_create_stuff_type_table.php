@@ -18,7 +18,7 @@ class CreateStuffTypeTable extends Migration
             $table->unsignedInteger('stuff_id');
             $table->foreign('stuff_id')->references('id')->on('stuff')->onDelete('cascade');
 
-            $table->unsignedInteger('type_id');
+            $table->unsignedInteger('type_id')->nullable();
             $table->foreign('type_id')->references('id')->on('type')->onDelete('set null');
             $table->timestamps();
         });

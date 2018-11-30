@@ -35,16 +35,16 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>اللقب</label>
-                                        {!!Form::text('last_name','',['placeholder' => 'محمد','tabindex'=>'3'])!!}
+                                        {!!Form::text('last_name','',['placeholder' => '','tabindex'=>'3'])!!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>الأسم الثانى</label>
-                                        {!!Form::text('middle_name','',['placeholder' => 'سمير','tabindex'=>'2'])!!}
+                                        {!!Form::text('middle_name','',['placeholder' => '','tabindex'=>'2'])!!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>الأسم
                                             الأول</label>
-                                        {!!Form::text('first_name','',['placeholder' => 'أحمد','tabindex'=>'1'])!!}
+                                        {!!Form::text('first_name','',['placeholder' => '','tabindex'=>'1'])!!}
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="col-sm-3">
@@ -53,11 +53,11 @@
                                     </div>
                                     <div class="col-sm-3">
                                         <label><i class="fa fa-phone"></i>التليفون #</label>
-                                        {!! Form::text('phone','',['placeholder' =>'01155798554','tabindex'=>'7']) !!}
+                                        {!! Form::text('phone','',['placeholder' =>'','tabindex'=>'7']) !!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label><i class="fa fa-address-book"></i>العنوان #</label>
-                                        {!! Form::text('address','',['placeholder'=>'شارع محمد على','tabindex'=>'6']) !!}
+                                        {!! Form::text('address','',['placeholder'=>'','tabindex'=>'6']) !!}
                                     </div>
                                     @if(isset($statuss))
                                         <div class="col-sm-3">
@@ -81,30 +81,30 @@
 
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-briefcase"></i>الوظيفة</label>
-                                        {!! Form::text('job','',['placeholder' =>'الوظيفة','tabindex'=>'12']) !!}
+                                        {!! Form::text('job','',['placeholder' =>'','tabindex'=>'12']) !!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-phone"></i>رقم الموبيل #</label>
-                                        {!! Form::text('FPhone','',['placeholder' =>'0115481651','tabindex'=>'11']) !!}
+                                        {!! Form::text('FPhone','',['placeholder' =>'','tabindex'=>'11']) !!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>أسم
                                             الأم</label>
-                                        {!! Form::text('mother_name','',['placeholder' =>'الأم','tabindex'=>'10']) !!}
+                                        {!! Form::text('mother_name','',['placeholder' =>'','tabindex'=>'10']) !!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-user-circle-o"></i>أسم
                                             الأب</label>
-                                        {!! Form::text('father_name','',['placeholder' =>'الأب','tabindex'=>'9']) !!}
+                                        {!! Form::text('father_name','',['placeholder' =>'','tabindex'=>'9']) !!}
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="col-sm-3">
                                         <label><i class="fa fa-phone"></i>رقم تليفون ثانى #</label>
-                                        {!! Form::text('LPhone','',['placeholder' =>'01654894965','tabindex'=>'16']) !!}
+                                        {!! Form::text('LPhone','',['placeholder' =>'','tabindex'=>'16']) !!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label><i class="fa fa-envelope-o"></i>الأميل</label>
-                                        {!! Form::email('email','',['placeholder' =>'ahmed155@gmail.com','tabindex'=>'15']) !!}
+                                        {!! Form::email('email','',['placeholder' =>'','tabindex'=>'15']) !!}
                                     </div>
                                     <div class="col-sm-3">
                                         <label><i class="fa fa-flag"></i>الجنسية </label>
@@ -133,7 +133,7 @@
                                 <div class="dash-form">
                                     <div class="col-sm-3">
                                         <label class="clear-top-margin"><i class="fa fa-credit-card"></i> المبلغ المقدم</label>
-                                        {{ Form::number('payment','0',['placeholder' => '500','tabindex'=>'20','min'=>'0']) }}
+                                        {{ Form::number('payment','0',['placeholder' => '','tabindex'=>'20','min'=>'0']) }}
                                     </div>
                                     @if(isset($classes))
                                         <div class="col-sm-3">

@@ -198,6 +198,7 @@
         <!-- **********************************************************Edit details modal ********************************************************-->
         <div id="editDetailModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
+                @if(isset($student))
                 {{ Form::open(array('url' => "incustudent/$student->id" , 'method' => 'PUT', 'class'=> "updateIncustudentForm", 'id' => 'updateIncustudentForm' ))}}
                 <input type="hidden" value="{{ csrf_token() }}" id="token">
             {{--<input type="hidden" value="{{ $student->id }}" id="id" name="id">--}}
@@ -242,14 +243,6 @@
                                 <option value="4">الفصل 4</option>
                                 <option value="5">الفصل 5</option>
                             </select>
-                            {{--@if(isset($Update_Classes))--}}
-                            {{--<select name="classroom_id" id="classroom_id">--}}
-                            {{--@foreach( $Update_Classes as $key => $classroom_id )--}}
-                            {{--<option value="{{ $classroom_id->id }}"  @if($classroom_id->id == $student->classroom_id) selected='selected' @endif >{{ $classroom_id->name }}</option>--}}
-                            {{--<option value="{{ $classroom_id->id }}">{{$classroom_id->name}}</option>--}}
-                            {{--@endforeach--}}
-                            {{--</select>--}}
-                            {{--@endif--}}
                         </div>
                         <div class="col-sm-3">
                             <label><i class="fa fa-calendar"></i>الوقت</label>
@@ -257,14 +250,6 @@
                                 <option value="1">من 8 ال 1</option>
                                 <option value="2">من 2 الى 5</option>
                             </select>
-                            {{--@if(isset($shifts))--}}
-                            {{--<select name="shift_id">--}}
-                            {{--@foreach($shifts as $shift)--}}
-                            {{--<option value="{{ $shift->id }}"  @if($shift->id == $student->shift_id) selected='selected' @endif >{{ $shift->time }}</option>--}}
-                            {{--<option value="{{$shift->id}}">{{$shift->time}}</option>--}}
-                            {{--@endforeach--}}
-                            {{--</select>--}}
-                            {{--@endif--}}
                         </div>
                         <div class="col-sm-3">
                             <label><i class="fa fa-envelope-o"></i>حالة الطالب</label>
@@ -274,20 +259,13 @@
                                 <option value="3">يتيم الأم</option>
                                 <option value="4">يتيم الأتنين</option>
                             </select>
-                            {{--@if(isset($statuss))--}}
-                            {{--<select name="status_id">--}}
-                            {{--@foreach($statuss as $status)--}}
-                            {{--<option value="{{$status->id}}"  @if( $status->id == $student->status_id) selected='selected' @endif >{{ $status->name }}</option>--}}
-                            {{--<option value="{{$status->id}}">{{$status->name}}</option>--}}
-                            {{--@endforeach--}}
-                            {{--</select>--}}
-                            {{--@endif--}}
                         </div>
                         <div class="clearfix"></div>
                     </div>
                     <div class="modal-footer">
                         <div class="table-action-box">
                             {{Form::submit('حفظ',['id'=>"$student->id",'class'=>'updateIncustudent button_submit','tabindex'=>'9'])}}
+                            @endif
                             {{--<a href="#" class="save" id="updateIncustudent"><i class="fa fa-check"></i>حفظ</a>--}}
                             <a href="#" class="cancel" id="CancelUpdateForm" data-dismiss="modal" tabindex="10"><i
                                     class="fa fa-ban"></i>أغلاق</a>
